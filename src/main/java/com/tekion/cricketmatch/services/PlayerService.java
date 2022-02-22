@@ -3,7 +3,6 @@ package com.tekion.cricketmatch.services;
 import com.tekion.cricketmatch.services.beans.player.Batsman;
 import com.tekion.cricketmatch.services.beans.player.Bowler;
 import com.tekion.cricketmatch.services.beans.player.Player;
-import com.tekion.cricketmatch.services.beans.team.Team;
 import com.tekion.cricketmatch.services.repo.IPlayerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
