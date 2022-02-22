@@ -1,11 +1,14 @@
-package com.tekion.cricketmatch.entities.player;
+package com.tekion.cricketmatch.services.beans.player;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import lombok.Data;
 
+// todo: remove Entity, Columns if not needed explicitly
+@Data
 @Entity
 public class Batsman extends Player {
-    @Column
+
     private int runsScored;
     @Column
     private int bowlPlayed;

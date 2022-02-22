@@ -1,13 +1,6 @@
-package com.tekion.cricketmatch.controller;
+package com.tekion.cricketmatch.api;
 
-import com.tekion.cricketmatch.entities.player.Batsman;
-import com.tekion.cricketmatch.entities.player.Bowler;
-import com.tekion.cricketmatch.entities.player.Player;
-import com.tekion.cricketmatch.services.TeamService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class TeamController {

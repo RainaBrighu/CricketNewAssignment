@@ -1,9 +1,9 @@
 package com.tekion.cricketmatch.services;
 
-import com.tekion.cricketmatch.entities.player.Batsman;
-import com.tekion.cricketmatch.entities.player.Bowler;
-import com.tekion.cricketmatch.entities.player.Player;
-import com.tekion.cricketmatch.repository.PlayerRepository;
+import com.tekion.cricketmatch.services.beans.player.Batsman;
+import com.tekion.cricketmatch.services.beans.player.Bowler;
+import com.tekion.cricketmatch.services.beans.player.Player;
+import com.tekion.cricketmatch.services.repo.IPlayerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,23 +13,23 @@ import java.util.List;
 public class PlayerService {
 
     @Autowired
-    PlayerRepository playerRepository;
+    IPlayerRepo IPlayerRepo;
 
     public List<Player> getAllPlayer() {
-        return playerRepository.findAll();
+        return IPlayerRepo.findAll();
     }
 
     public Player getPlayer(int playerId ) {
-        return playerRepository.findById(playerId).get();
+        return IPlayerRepo.findById(playerId).get();
     }
 
     public  Batsman addBatsman(Batsman batsman) {
-        playerRepository.save(batsman);
+        IPlayerRepo.save(batsman);
         return batsman;
     }
 
     public Bowler addBowler(Bowler bowler) {
-        playerRepository.save(bowler);
+        IPlayerRepo.save(bowler);
         return bowler;
     }
 }

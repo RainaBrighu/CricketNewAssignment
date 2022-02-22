@@ -1,14 +1,5 @@
 package com.tekion.cricketmatch.services;
 
-import com.tekion.cricketmatch.entities.player.Batsman;
-import com.tekion.cricketmatch.entities.player.Bowler;
-import com.tekion.cricketmatch.entities.player.Player;
-import com.tekion.cricketmatch.repository.Team1Repository;
-import com.tekion.cricketmatch.repository.Team2Repository;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
-
 public class TeamService {
 /*
     @Autowired

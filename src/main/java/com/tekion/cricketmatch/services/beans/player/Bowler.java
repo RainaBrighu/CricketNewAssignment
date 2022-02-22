@@ -1,4 +1,4 @@
-package com.tekion.cricketmatch.entities.player;
+package com.tekion.cricketmatch.services.beans.player;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
