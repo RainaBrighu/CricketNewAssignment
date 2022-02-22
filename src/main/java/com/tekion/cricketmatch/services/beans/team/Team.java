@@ -15,6 +15,6 @@ public class Team {
 
     private int teamId;
     private String teamName;
-    private List<Player> players = new ArrayList<>();
+    private List<Player> players = new ArrayList<>(11);
 
 }

@@ -3,10 +3,7 @@ package com.tekion.cricketmatch.api;
 import com.tekion.cricketmatch.services.TeamService;
 import com.tekion.cricketmatch.services.beans.team.Team;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,7 @@ public class TeamController {
     public Team getTeam(@PathVariable int teamId) {
         return teamService.getTeam(teamId);
     }
+
     @PostMapping("/add/{teamId}/{teamName}")
     public Team addTeam(@PathVariable int teamId, @PathVariable String teamName) {
         return teamService.addTeam(teamId,teamName);
