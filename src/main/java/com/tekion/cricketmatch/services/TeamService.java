@@ -1,53 +1,41 @@
 package com.tekion.cricketmatch.services;
 
+import com.tekion.cricketmatch.services.beans.player.Player;
+import com.tekion.cricketmatch.services.beans.team.Team;
+import com.tekion.cricketmatch.services.repo.IPlayerRepo;
+import com.tekion.cricketmatch.services.repo.ITeamRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TeamService {
-/*
+
     @Autowired
-    Team1Repository team1Repository;
+    IPlayerRepo iPlayerRepo;
     @Autowired
-    Team2Repository team2Repository;
+    ITeamRepo iTeamRepo;
 
-    public List<Player> getAllPlayers(String team) {
-        if(team.equals("team1"))
-            return team1Repository.findAll();
-        else
-            return team2Repository.findAll();
+    public List<Team> getAllTeams() {
+        return iTeamRepo.findAll();
     }
 
-    public Player getPlayer(String team, int playerId) {
-        if(team.equals("team1"))
-            return team1Repository.findById(playerId).get();
-        else
-            return team2Repository.findById(playerId).get();
+    public Team getTeam(int teamId) {
+        return iTeamRepo.getById(teamId);
     }
 
-    public Batsman addBatsman(String team,Batsman batsman) {
-        if(team.equals("team1"))
-            return team1Repository.save(batsman);
-        else
-            return team2Repository.save(batsman);
-    }
+    public Team addTeam(int teamId,String  teamName) {
 
-    public Bowler addBowler(String team,Bowler bowler) {
-        if(team.equals("team1"))
-            return team1Repository.save(bowler);
-        else
-            return team2Repository.save(bowler);
+        List<Player> players = iPlayerRepo.findAll();
+        Team team = new Team();
+        List<Player>  teamPlayer = new ArrayList<>();
+        for(Player player : players) {
+            if(player.getTeamId() == teamId)
+                teamPlayer.add(player);
+        }
+        team.setPlayers(teamPlayer);
+        team.setTeamName(teamName);
+        team.setTeamId(teamId);
+        return team;
     }
-
-    public Batsman updateBatsman(String team,Batsman batsman) {
-        if(team.equals("team1"))
-            return team1Repository.save(batsman);
-        else
-            return team2Repository.save(batsman);
-    }
-
-    public Bowler updateBowler(String team,Bowler bowler) {
-        if(team.equals("team1"))
-            return team1Repository.save(bowler);
-        else
-            return team2Repository.save(bowler);
-    }
-
- */
 }
