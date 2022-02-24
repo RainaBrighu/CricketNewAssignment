@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class PlayerController {
@@ -26,6 +25,6 @@ public class PlayerController {
 
     @PostMapping("/add/player")
     public Player addBatsman(@RequestBody Player player) {
-        return this.playerService.addBatsman(player);
+        return this.playerService.addPlayer(player);
     }
 }

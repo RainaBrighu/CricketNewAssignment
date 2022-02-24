@@ -21,7 +21,7 @@ public class PlayerService {
         return iPlayerRepo.getById(playerId);
     }
 
-    public  Player addBatsman(Player player) {
+    public  Player addPlayer(Player player) {
         iPlayerRepo.save(player);
         return player;
     }

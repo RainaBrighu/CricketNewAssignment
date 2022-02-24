@@ -19,6 +19,7 @@ public class ScoreCard {
     @Id
     private int playerId;
     private int teamId;
+    private String playerName;
     private String playerType;
 
     private int runsScored;

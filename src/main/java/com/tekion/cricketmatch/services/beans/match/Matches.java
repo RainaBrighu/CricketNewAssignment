@@ -19,9 +19,11 @@ public class Matches {
     private int firstTeamId;
     private int secondTeamId;
     private int winningTeam;
+
     private int firstInningScore;
     private int firstInningWickets;
     private int firstInningOvers;
+
     private int secondInningScore;
     private int secondInningWickets;
     private int secondInningOvers;

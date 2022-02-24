@@ -7,20 +7,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@IdClass(PlayerPkId.class)
 public class Player {
 
     @Id
+    @GeneratedValue()
     private int playerId;
-    @Id
     private int teamId;
     private String playerName;
     private String playerType;

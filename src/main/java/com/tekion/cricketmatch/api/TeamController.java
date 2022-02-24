@@ -24,7 +24,7 @@ public class TeamController {
     }
 
     @PostMapping("/add/{teamId}/{teamName}")
-    public Team addTeam(@PathVariable int teamId, @PathVariable String teamName) {
+    public Team addTeam(@PathVariable int teamId,@PathVariable String teamName) {
         return teamService.addTeam(teamId,teamName);
     }
 }
