@@ -125,4 +125,8 @@ public class MatchService {
 
         return  "Match Successfully Played";
     }
+
+    public List<ScoreCard> getMatchScoreCard(int matchId) {
+        return iScoreCardRepo.getAllPlayerByMatchId(matchId);
+    }
 }

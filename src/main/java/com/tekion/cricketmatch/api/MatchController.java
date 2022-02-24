@@ -2,6 +2,7 @@ package com.tekion.cricketmatch.api;
 
 import com.tekion.cricketmatch.services.MatchService;
 import com.tekion.cricketmatch.services.beans.match.Matches;
+import com.tekion.cricketmatch.services.beans.scorecard.ScoreCard;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,4 +28,10 @@ public class MatchController {
     public String playMatch(@RequestBody Matches match) {
         return  matchService.playMatch(match);
     }
+
+    @GetMapping("/scorecard/{matchId}")
+    public List<ScoreCard> getMatchScoreCard(@PathVariable int matchId) {
+        return this.matchService.getMatchScoreCard(matchId);
+    }
+
 }
