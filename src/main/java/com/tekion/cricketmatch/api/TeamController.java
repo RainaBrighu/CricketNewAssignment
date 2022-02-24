@@ -10,22 +10,20 @@ import java.util.List;
 @RestController
 public class TeamController {
 
-    @Autowired
-    TeamService teamService;
+  @Autowired TeamService teamService;
 
-    @GetMapping("/team")
-    public List<Team> getAllTeams() {
-        return teamService.getAllTeams();
-    }
+  @GetMapping("/team")
+  public List<Team> getAllTeams() {
+    return teamService.getAllTeams();
+  }
 
-    @GetMapping("/team/{teamId}")
-    public Team getTeam(@PathVariable int teamId) {
-        return teamService.getTeam(teamId);
-    }
+  @GetMapping("/team/{teamId}")
+  public Team getTeam(@PathVariable int teamId) {
+    return teamService.getTeam(teamId);
+  }
 
-    @PostMapping("/add/{teamId}/{teamName}")
-    public Team addTeam(@PathVariable int teamId,@PathVariable String teamName) {
-        return teamService.addTeam(teamId,teamName);
-    }
-
+  @PostMapping("/add/{teamId}/{teamName}")
+  public Team addTeam(@PathVariable int teamId, @PathVariable String teamName) {
+    return teamService.addTeam(teamId, teamName);
+  }
 }

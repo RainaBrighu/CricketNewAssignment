@@ -14,8 +14,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Team {
-    @Id
-    private int teamId;
-    private String teamName;
-    private int noOfPlayers;
+  @Id private int teamId;
+  private String teamName;
+  private int noOfPlayers;
 }

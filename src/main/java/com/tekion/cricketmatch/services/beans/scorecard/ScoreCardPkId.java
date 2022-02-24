@@ -7,12 +7,11 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 public class ScoreCardPkId implements Serializable {
-    private int matchId;
-    private int playerId;
+  private int matchId;
+  private int playerId;
 }

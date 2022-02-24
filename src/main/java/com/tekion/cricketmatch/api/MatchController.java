@@ -11,27 +11,25 @@ import java.util.List;
 @RestController
 public class MatchController {
 
-    @Autowired
-    private MatchService matchService;
+  @Autowired private MatchService matchService;
 
-    @GetMapping("/match")
-    public List<Matches> getAllMatches() {
-        return matchService.getAllMatches();
-    }
+  @GetMapping("/match")
+  public List<Matches> getAllMatches() {
+    return matchService.getAllMatches();
+  }
 
-    @GetMapping("/match/{matchId}")
-    public Matches getMatch(@PathVariable int matchId) {
-        return matchService.getMatch(matchId);
-    }
+  @GetMapping("/match/{matchId}")
+  public Matches getMatch(@PathVariable int matchId) {
+    return matchService.getMatch(matchId);
+  }
 
-    @PostMapping("/playMatch")
-    public String playMatch(@RequestBody Matches match) {
-        return  matchService.playMatch(match);
-    }
+  @PostMapping("/playMatch")
+  public String playMatch(@RequestBody Matches match) {
+    return matchService.playMatch(match);
+  }
 
-    @GetMapping("/scorecard/{matchId}")
-    public List<ScoreCard> getMatchScoreCard(@PathVariable int matchId) {
-        return this.matchService.getMatchScoreCard(matchId);
-    }
-
+  @GetMapping("/scorecard/{matchId}")
+  public List<ScoreCard> getMatchScoreCard(@PathVariable int matchId) {
+    return this.matchService.getMatchScoreCard(matchId);
+  }
 }

@@ -14,17 +14,16 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Matches {
-    @Id
-    private int matchId;
-    private int firstTeamId;
-    private int secondTeamId;
-    private int winningTeam;
+  @Id private int matchId;
+  private int firstTeamId;
+  private int secondTeamId;
+  private int winningTeam;
 
-    private int firstInningScore;
-    private int firstInningWickets;
-    private int firstInningOvers;
+  private int firstInningScore;
+  private int firstInningWickets;
+  private int firstInningOvers;
 
-    private int secondInningScore;
-    private int secondInningWickets;
-    private int secondInningOvers;
+  private int secondInningScore;
+  private int secondInningWickets;
+  private int secondInningOvers;
 }

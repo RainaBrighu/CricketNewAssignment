@@ -10,19 +10,18 @@ import java.util.List;
 @Service
 public class PlayerService {
 
-    @Autowired
-    IPlayerRepo iPlayerRepo;
+  @Autowired IPlayerRepo iPlayerRepo;
 
-    public List<Player> getAllPlayer() {
-        return ( iPlayerRepo.findAll());
-    }
+  public List<Player> getAllPlayer() {
+    return (iPlayerRepo.findAll());
+  }
 
-    public Player getPlayer(int playerId ) {
-        return iPlayerRepo.getById(playerId);
-    }
+  public Player getPlayer(int playerId) {
+    return iPlayerRepo.getById(playerId);
+  }
 
-    public  Player addPlayer(Player player) {
-        iPlayerRepo.save(player);
-        return player;
-    }
+  public Player addPlayer(Player player) {
+    iPlayerRepo.save(player);
+    return player;
+  }
 }

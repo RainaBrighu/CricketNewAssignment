@@ -1,6 +1,5 @@
 package com.tekion.cricketmatch.services.beans.player;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,18 +16,16 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Player {
 
-    @Id
-    @GeneratedValue()
-    private int playerId;
-    private int teamId;
-    private String playerName;
-    private String playerType;
+  @Id @GeneratedValue() private int playerId;
+  private int teamId;
+  private String playerName;
+  private String playerType;
 
-    private int runsScored;
-    private int bowlPlayed;
-    private int noOfBoundaries;
+  private int runsScored;
+  private int bowlPlayed;
+  private int noOfBoundaries;
 
-    private int oversBowled;
-    private int wicketsTaken;
-    private int runsGiven;
+  private int oversBowled;
+  private int wicketsTaken;
+  private int runsGiven;
 }

@@ -14,19 +14,17 @@ import javax.persistence.IdClass;
 @IdClass(ScoreCardPkId.class)
 public class ScoreCard {
 
-    @Id
-    private int matchId;
-    @Id
-    private int playerId;
-    private int teamId;
-    private String playerName;
-    private String playerType;
+  @Id private int matchId;
+  @Id private int playerId;
+  private int teamId;
+  private String playerName;
+  private String playerType;
 
-    private int runsScored;
-    private int bowlPlayed;
-    private int noOfBoundaries;
+  private int runsScored;
+  private int bowlPlayed;
+  private int noOfBoundaries;
 
-    private int oversBowled;
-    private int wicketsTaken;
-    private int runsGiven;
+  private int oversBowled;
+  private int wicketsTaken;
+  private int runsGiven;
 }

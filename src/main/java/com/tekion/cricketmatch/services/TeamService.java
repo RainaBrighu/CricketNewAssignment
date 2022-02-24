@@ -12,30 +12,27 @@ import java.util.List;
 @Service
 public class TeamService {
 
-    @Autowired
-    IPlayerRepo iPlayerRepo;
-    @Autowired
-    ITeamRepo iTeamRepo;
+  @Autowired IPlayerRepo iPlayerRepo;
+  @Autowired ITeamRepo iTeamRepo;
 
-    public List<Team> getAllTeams() {
-       return this.iTeamRepo.findAll();
-    }
+  public List<Team> getAllTeams() {
+    return this.iTeamRepo.findAll();
+  }
 
-    public Team getTeam(int teamId) {
-        return this.iTeamRepo.getById(teamId);
-    }
+  public Team getTeam(int teamId) {
+    return this.iTeamRepo.getById(teamId);
+  }
 
+  public Team addTeam(int teamId, String teamName) {
 
-    public Team addTeam(int teamId,String teamName) {
+    Team team = new Team();
+    List<Player> players = iPlayerRepo.getAllPlayerByTeamId(teamId);
 
-        Team team = new Team();
-        List<Player> players = iPlayerRepo.getAllPlayerByTeamId(teamId);
-
-        int teamSize = players.size();
-        team.setTeamName(teamName);
-        team.setTeamId(teamId);
-        team.setNoOfPlayers(teamSize);
-        iTeamRepo.save(team);
-        return team;
-    }
+    int teamSize = players.size();
+    team.setTeamName(teamName);
+    team.setTeamId(teamId);
+    team.setNoOfPlayers(teamSize);
+    iTeamRepo.save(team);
+    return team;
+  }
 }

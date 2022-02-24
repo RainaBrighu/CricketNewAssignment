@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface IPlayerRepo extends JpaRepository<Player,Integer> {
 
-    @Query(value = "SELECT * FROM player p WHERE p.team_id = ?1",nativeQuery = true)
-    List<Player> getAllPlayerByTeamId(Integer teamId);
+  @Query(value = "SELECT * FROM player p WHERE p.team_id = ?1", nativeQuery = true)
+  List<Player> getAllPlayerByTeamId(Integer teamId);
 }
