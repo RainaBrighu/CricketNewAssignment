@@ -1,10 +1,6 @@
-package com.tekion.cricketmatch.services.beans.player;
+package com.tekion.cricketmatch.services.beans.scorecard;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,16 +9,16 @@ import javax.persistence.IdClass;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@IdClass(PlayerPkId.class)
-public class Player {
+@AllArgsConstructor
+@IdClass(ScoreCardPkId.class)
+public class ScoreCard {
 
     @Id
-    private int playerId;
+    private int matchId;
     @Id
+    private int playerId;
     private int teamId;
-    private String playerName;
     private String playerType;
 
     private int runsScored;

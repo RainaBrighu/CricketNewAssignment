@@ -24,10 +24,13 @@ public class TeamService {
     public Team getTeam(int teamId) {
         return this.iTeamRepo.getById(teamId);
     }
-    public Team addTeam(int teamId,String  teamName) {
+
+
+    public Team addTeam(int teamId,String teamName) {
 
         Team team = new Team();
-        List<Player> players = iPlayerRepo.getAllPlayerById(teamId);
+        List<Player> players = iPlayerRepo.getAllPlayerByTeamId(teamId);
+
         int teamSize = players.size();
         team.setTeamName(teamName);
         team.setTeamId(teamId);
