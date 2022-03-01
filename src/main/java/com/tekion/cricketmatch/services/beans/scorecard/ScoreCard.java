@@ -1,5 +1,6 @@
 package com.tekion.cricketmatch.services.beans.scorecard;
 
+import com.tekion.cricketmatch.services.beans.player.PlayerType;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ public class ScoreCard {
   @Id private int playerId;
   private int teamId;
   private String playerName;
-  private String playerType;
+  private PlayerType playerType;
 
   private int runsScored;
   private int bowlPlayed;

@@ -12,7 +12,7 @@ public class PlayerController {
 
   @Autowired private PlayerService playerService;
 
-  @GetMapping("/player")
+  @GetMapping("/players")
   public List<Player> getAllPlayer() {
     return this.playerService.getAllPlayer();
   }
@@ -23,7 +23,7 @@ public class PlayerController {
   }
 
   @PostMapping("/add/player")
-  public Player addBatsman(@RequestBody Player player) {
+  public Player addPlayer(@RequestBody Player player) {
     return this.playerService.addPlayer(player);
   }
 }

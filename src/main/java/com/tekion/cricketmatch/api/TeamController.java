@@ -12,18 +12,19 @@ public class TeamController {
 
   @Autowired TeamService teamService;
 
-  @GetMapping("/team")
+  @GetMapping("/teams")
   public List<Team> getAllTeams() {
     return teamService.getAllTeams();
   }
 
   @GetMapping("/team/{teamId}")
-  public Team getTeam(@PathVariable int teamId) {
+  public Team getTeam(@PathVariable("teamId") int teamId) {
     return teamService.getTeam(teamId);
   }
 
   @PostMapping("/add/{teamId}/{teamName}")
-  public Team addTeam(@PathVariable int teamId, @PathVariable String teamName) {
+  public Team addTeam(
+      @PathVariable("teamId") int teamId, @PathVariable("teamName") String teamName) {
     return teamService.addTeam(teamId, teamName);
   }
 }

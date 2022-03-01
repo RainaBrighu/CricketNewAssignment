@@ -11,9 +11,9 @@ import java.util.List;
 @RestController
 public class MatchController {
 
-  @Autowired private MatchService matchService;
+  @Autowired MatchService matchService;
 
-  @GetMapping("/match")
+  @GetMapping("/matches")
   public List<Matches> getAllMatches() {
     return matchService.getAllMatches();
   }

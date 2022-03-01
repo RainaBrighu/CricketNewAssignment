@@ -12,14 +12,14 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Player {
 
   @Id @GeneratedValue() private int playerId;
   private int teamId;
   private String playerName;
-  private String playerType;
+  private PlayerType playerType;
 
   private int runsScored;
   private int bowlPlayed;
